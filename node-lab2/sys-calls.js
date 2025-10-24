@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+const fs = require('fs');
 
 /*
 --- Step 1 ---
@@ -27,7 +27,7 @@ fs.writeFile('output.txt', output, (err) => {
 --- Step 2 ---
 */
 
-import * as os from 'os';
+const os = require('os');
 
 const hostname = os.hostname();
 const platform = os.platform();
@@ -69,8 +69,7 @@ regardless of their position in the code.
 --- OT Step 3 ---
 */
 
-import { promises as fsp } from 'fs';
-
+const fsp = require('fs').promises;
 
 async function readFileAndLogOSInfo() {
     try {
